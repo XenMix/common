@@ -22,7 +22,8 @@ setInterval(function() {
 			for (var i = side ; i < 5 + side ; i++) {
 				var plys = document.getElementsByClassName('player-content');
 				var str = $(plys[i]).data('nickname');
-				$('body').('<div style="z-index: 999;overflow: hidden; position: absolute; width:50px; height:50px; left:'+$(plys[i]).offset().left+'px; top:'+ (parseInt($(plys[i]).offset().top) + 10) +'px"><iframe style="position: relative;left: -586px;bottom:405px;height: 550px;" width="700px" height="512px" scrolling="no" src="https://www.faceit.com/players/'+str+'/csgo" class="level_ifrm"></iframe>');
+				var offleft = parseInt($(plys[i]).offset().left) + 10; 
+				$('body').append('<div style="z-index: 999;overflow: hidden; position: absolute; width:50px; height:50px; left:'+offleft+'px; top:'+ $(plys[i]).offset().top +'px"><iframe style="position: relative;left: -586px;bottom:405px;height: 550px;" width="700px" height="512px" scrolling="no" src="https://www.faceit.com/players/'+str+'/csgo" class="level_ifrm"></iframe>');
 			}
 		}
 	}
