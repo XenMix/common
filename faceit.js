@@ -2,6 +2,8 @@ window.onload = function() {
 
 	var us = ["XenMix", "DE4THROW", "ZAKtw"];
 	var side = 0;
+	
+	console.log('Loaded');
 
 	if (document.location.href.toString().indexOf("room") != -1)
 	{
