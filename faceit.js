@@ -16,7 +16,7 @@ if (typeof jQuery != 'undefined'){
 if (document.location.href.toString().indexOf("room") != -1)
 {
 	for (var i = 0 ; i < 5 ; i++) {
-		var str = jQuery(plys[i]).find(".nickname").html();
+		var str = $(plys[i]).find(".nickname").html();
         console.log('ok' + str);
 		if (str === undefined)
 		{
