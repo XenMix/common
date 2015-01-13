@@ -4,11 +4,11 @@ var side = 0;
 
 if (typeof jQuery != 'undefined') {
  
-    alert("jQuery library is loaded!");
+    console.log("jQuery library is loaded!");
  
 }else{
  
-    alert("jQuery library is not found!");
+    console.log("jQuery library is not found!");
  
 function LevelIframe(id, name)
 {
