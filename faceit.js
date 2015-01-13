@@ -1,7 +1,8 @@
 setTimeout(function() {
 	
 	console.log('Loaded');
-
+	var side = 0;
+	
 	if (document.location.href.toString().indexOf("room") != -1)
 	{
 		var us = ["XenMix", "DE4THROW", "ZAKtw"];
