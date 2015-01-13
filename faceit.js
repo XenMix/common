@@ -2,6 +2,14 @@ var plys = document.getElementsByClassName('player-content');
 var us = ["XenMix", "DE4THROW", "ZAKtw"];
 var side = 0;
 
+if (typeof jQuery != 'undefined') {
+ 
+    alert("jQuery library is loaded!");
+ 
+}else{
+ 
+    alert("jQuery library is not found!");
+ 
 function LevelIframe(id, name)
 {
 	$(id).find(".clearfix").append('<div style="level_ifrm_base"><iframe scrolling="no" src="https://www.faceit.com/players/'+name+'/csgo" class="level_ifrm"></iframe>');
