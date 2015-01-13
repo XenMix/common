@@ -1,4 +1,8 @@
 var plys = document.getElementsByClassName('player-content');
+if (plys === undefined)
+{
+	console.log('ERROR FUCK');
+}
 var us = ["XenMix", "DE4THROW", "ZAKtw"];
 var side = 0;
 
