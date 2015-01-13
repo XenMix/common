@@ -1,5 +1,11 @@
-setTimeout(function() {
+setInterval(function() {
+
+	var iframes = document.getElementsByClassName('level_ifrm');
+	if (iframes && iframes.lenght < 0)
+		return false;
+		
 	var plys = document.getElementsByClassName('player-content');
+	
 	var us = ["XenMix", "DE4THROW", "ZAKtw"];
 	var side = 0;
 
@@ -17,7 +23,7 @@ setTimeout(function() {
 		for (var i = side ; i < 5 + side ; i++) {
 			var plys = document.getElementsByClassName('player-content');
 			var str = $(plys[i]).data('nickname');
-			$(plys[i]).children('div').first().append('<div style="overflow: hidden; position: absolute; width:50px; height:50px;"><iframe style="position: relative;left: -586px;bottom:600px;height: 550px;" width="700px" height="512px" scrolling="no" src="https://www.faceit.com/players/'+str+'/csgo" class="level_ifrm"></iframe>');
+			$(plys[i]).children('div').first().append('<div style="overflow: hidden; position: absolute; width:50px; height:50px;"><iframe style="position: relative;left: -586px;bottom:405px;height: 550px;" width="700px" height="512px" scrolling="no" src="https://www.faceit.com/players/'+str+'/csgo" class="level_ifrm"></iframe>');
 		}
 	}
 }, 1000);
