@@ -1,17 +1,15 @@
 setInterval(function() {
 
 	var iframes = document.getElementsByClassName('level_ifrm');
-	if (typeof iframes[0] == "undefined")
+	if (typeof iframes[0] == "undefined" )
 	{
 		var plys = document.getElementsByClassName('player-content');
-		
 		var us = ["XenMix", "DE4THROW", "ZAKtw"];
 		var side = 0;
 
 		if (document.location.href.toString().indexOf("room") != -1)
 		{
 			for (var i = 0 ; i < 5 ; i++) {
-				
 				var str = $(plys[i]).data('nickname');
 				if( jQuery.inArray(str, us) != -1 )
 				{
@@ -27,4 +25,10 @@ setInterval(function() {
 			}
 		}
 	}
-}, 5000);
+	else if (document.location.href.toString().indexOf("room") == -1)
+	{
+		for (var i = 0 ; i < iframes.lenght ; i++) {
+			$(iframes[i]).remove();
+		}
+	}
+}, 1000);
