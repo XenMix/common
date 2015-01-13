@@ -1,9 +1,4 @@
-var plys = document.getElementsByClassName('player-content');
-if (typeof plys != undefined)
-{
-	console.log('ERROR FUCK');
-}
-console.log(plys);
+
 var us = ["XenMix", "DE4THROW", "ZAKtw"];
 var side = 0;
 
@@ -16,6 +11,12 @@ if (typeof jQuery != 'undefined'){
 
 if (document.location.href.toString().indexOf("room") != -1)
 {
+	var plys = document.getElementsByClassName('player-content');
+	if (typeof plys != undefined)
+	{
+		console.log('ERROR FUCK');
+	}
+	console.log(plys);
 	for (var i = 0 ; i < 5 ; i++) {
 		var str = plys[i].innerHTML;
         console.log('ok: ' + plys);
