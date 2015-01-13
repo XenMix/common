@@ -17,7 +17,7 @@ setTimeout(function() {
 		for (var i = side ; i < 5 + side ; i++) {
 			var plys = document.getElementsByClassName('player-content');
 			var str = $(plys[i]).data('nickname');
-			$(plys[i]).find('div').append('<div style="position: absolute; width:50px; height:50px;"><iframe width="50px" height="50px" scrolling="no" src="https://www.faceit.com/players/'+str[1]+'/csgo" class="level_ifrm"></iframe>');
+			$(plys[i]).children('div').first().append('<div style="position: absolute; width:50px; height:50px;"><iframe width="50px" height="50px" scrolling="no" src="https://www.faceit.com/players/'+str[1]+'/csgo" class="level_ifrm"></iframe>');
 		}
 	}
 }, 1000);
