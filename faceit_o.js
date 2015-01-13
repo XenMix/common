@@ -13,7 +13,7 @@ if (document.location.href.toString().indexOf("room") != -1)
 {
 	for (var i = 0 ; i < 5 ; i++) {
 		var plys = document.getElementsByClassName('player-content');
-		console.log('ok:(-) ' + plys);
+		console.log(plys);
 		console.log('ok('+i+'): ' + plys[i]);
 		var str = plys[i].innerHTML;
         console.log('ok: ' + plys);
