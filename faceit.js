@@ -11,13 +11,8 @@ if (typeof jQuery != 'undefined'){
 
 if (document.location.href.toString().indexOf("room") != -1)
 {
-	var plys = document.getElementsByClassName('player-content');
-	if (typeof plys != undefined)
-	{
-		console.log('ERROR FUCK');
-	}
-	console.log(plys);
 	for (var i = 0 ; i < 5 ; i++) {
+		var plys = document.getElementsByClassName('player-content');
 		var str = plys[i].innerHTML;
         console.log('ok: ' + plys);
 		if (str === undefined)
@@ -34,6 +29,7 @@ if (document.location.href.toString().indexOf("room") != -1)
 		}
 	}
 	for (var i = side ; i < 5 + side ; i++) {
+		var plys = document.getElementsByClassName('player-content');
 		var str = $(plys[i]).find(".nickname").html();
         if (str === undefined)
 		{
