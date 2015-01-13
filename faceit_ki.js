@@ -1,7 +1,7 @@
 setInterval(function() {
 
 	var iframes = document.getElementsByClassName('level_ifrm');
-	if (typeof iframes == "undefined" || iframes.lenght == 0)
+	if (iframes === undefined)
 	{
 		var plys = document.getElementsByClassName('player-content');
 		
