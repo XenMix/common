@@ -25,7 +25,7 @@ setInterval(function() {
 			}
 		}
 	}
-	else if (document.location.href.toString().indexOf("room") == -1)
+	else if ((document.location.href.toString().indexOf("room") != -1 && typeof $('.badge').first().attr('src') != "undefined") || document.location.href.toString().indexOf("room") == -1)
 	{
 		for (var i = 0 ; i < iframes.lenght ; i++) {
 			$(iframes[i]).remove();
