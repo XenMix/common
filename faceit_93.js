@@ -22,7 +22,7 @@ function OnPageSwitch()
 		}
 	}
 		
-	if (typeof $($('.badge')[side]).attr("src") != "undefined")
+	if (typeof $($('.badge')[side]).attr("src") == "undefined")
 	{
 		for (var i = side ; i < 5 + side ; i++) {
 			var plys = document.getElementsByClassName('player-content');
