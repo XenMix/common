@@ -22,7 +22,7 @@ function OnPageSwitch()
 		}
 	}
 		
-	if ($('.badge')[side])
+	if (typeof $($('.badge')[side]).attr("src") != "undefined")
 	{
 		for (var i = side ; i < 5 + side ; i++) {
 			var plys = document.getElementsByClassName('player-content');
@@ -40,7 +40,7 @@ setInterval(function() {
 		CurrPage = document.location.href.toString();
 		setTimeout(function (){ OnPageSwitch(); }, 2000);
 	}
-	else if (CurrPage.indexOf("room") != -1 && $('.badge')[side])
+	else if (CurrPage.indexOf("room") != -1 && typeof $($('.badge')[side]).attr("src") != "undefined")
 		$('.level_ifrm').remove();
 		
 }, 500);
