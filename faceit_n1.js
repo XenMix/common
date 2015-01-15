@@ -1,9 +1,9 @@
 setInterval(function() {
 
-	var iframes = document.getElementsByClassName('level_ifrm');
-	if (typeof iframes[0] == "undefined" )
+	var iframes = $('.level_ifrm');
+	if (typeof iframes[0] == "undefined" && typeof $('.badge').first().attr('src') == "undefined"))
 	{
-		var plys = document.getElementsByClassName('player-content');
+		var plys = $('.player-content');
 		var us = ["XenMix", "DE4THROW", "ZAKtw"];
 		var side = 0;
 
@@ -27,8 +27,6 @@ setInterval(function() {
 	}
 	else if ((document.location.href.toString().indexOf("room") != -1 && typeof $('.badge').first().attr('src') != "undefined") || document.location.href.toString().indexOf("room") == -1)
 	{
-		for (var i = 0 ; i < iframes.lenght ; i++) {
-			$(iframes[i]).remove();
-		}
+		$(iframes).remove();
 	}
 }, 1000);
