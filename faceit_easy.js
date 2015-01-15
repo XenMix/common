@@ -38,9 +38,9 @@ setInterval(function() {
 	if (CurrPage != document.location.href.toString())
 	{
 		CurrPage = document.location.href.toString();
-		setTimeout(function (){ OnPageSwitch(); console.log('checkup'); }, 2000);
+		setTimeout(function (){ OnPageSwitch(); }, 2000);
 	}
 	else if (CurrPage.indexOf("room") != -1 && $('.badge')[side])
 		$('.level_ifrm').remove();
 		
-}, 1000);
+}, 500);
