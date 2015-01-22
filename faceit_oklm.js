@@ -1,10 +1,5 @@
 var CurrPage = "";
 var side = 0;
-var MyName = "";
-
-$( window ).load(function() {
-	MyName = $($('.nickname')[0]).find('a').html();
-});
 
 function OnPageSwitch()
 {
@@ -14,6 +9,7 @@ function OnPageSwitch()
 		return false;
 	}
 	
+	var MyName = $($('.nickname')[0]).find('a').html();
 	var plys = $('.player-content');
 
 	for (var i = 0 ; i < 5 ; i++) 
