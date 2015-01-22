@@ -12,7 +12,7 @@ function OnPageSwitch()
 	var MyName = $($('.nickname')[0]).find('a').html();
 	var plys = $('.player-content');
 
-	for (var i = 0 ; i < 5 ; i++) 
+	for (var i = 0 ; i < 5 ; i++)
 	{
 		var str = $(plys[i]).data('nickname');
 		if( str == MyName )
@@ -43,7 +43,7 @@ $(window).resize(function() {
 			$('#seek_iframe_'+i).css('left', offleft);
 		}
 	}
-	
+
 });
 
 setInterval(function() {
