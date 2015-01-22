@@ -4,7 +4,7 @@ var MyName = "";
 
 $( window ).load(function() {
 	MyName = $($('.nickname')[0]).find('a').html();
-}
+});
 
 function OnPageSwitch()
 {
