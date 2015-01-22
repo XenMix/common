@@ -4,7 +4,11 @@ var side = 0;
 function CreateLevelTxt(offleft, offtop, name, i)
 {
 	$.get('https://api.faceit.com/api/nicknames/'+name, function(data) {
-		$('body').append('<div id="seek_iframe_'+i+'" class="level_ifrm" style="z-index: 999;overflow: hidden; font-size: 30px; position: absolute; width:50px; height:50px; color:red; left:'+offleft+'px; top:'+offtop+'px">'+data.payload.csgo_skill_level_label+'</div>');
+		if (data.payload.csgo_skill_level_label === "-1") {
+			$('body').append('<div id="seek_iframe_'+i+'" class="level_ifrm" style="z-index: 999;overflow: hidden; font-size: 30px; position: absolute; width:50px; height:50px; color:red; left:'+offleft+'px; top:'+offtop+'px">('+data.payload.csgo_skill_level+')</div>');
+		} else {
+			$('body').append('<div id="seek_iframe_'+i+'" class="level_ifrm" style="z-index: 999;overflow: hidden; font-size: 30px; position: absolute; width:50px; height:50px; color:red; left:'+offleft+'px; top:'+offtop+'px">&nbsp;'+data.payload.csgo_skill_level_label+'</div>');
+		}
 	});
 }
 
