@@ -1,6 +1,10 @@
 var CurrPage = "";
 var side = 0;
-var MyName = $($('.nickname')[0]).find('a').html();
+var MyName = "";
+
+$( window ).load(function() {
+	MyName = $($('.nickname')[0]).find('a').html();
+}
 
 function OnPageSwitch()
 {
