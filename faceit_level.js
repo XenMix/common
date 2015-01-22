@@ -5,9 +5,9 @@ function CreateLevelTxt(offleft, offtop, name, i)
 {
 	$.get('https://api.faceit.com/api/nicknames/'+name, function(data) {
 		if (data.payload.csgo_skill_level_label === "-1") {
-			$('body').append('<div id="seek_iframe_'+i+'" class="level_ifrm" style="z-index: 999;overflow: hidden; font-size: 30px; position: absolute; width:50px; height:50px; color:red; left:'+offleft+'px; top:'+offtop+'px">('+data.payload.csgo_skill_level+')</div>');
+			$('body').append('<div id="seek_iframe_'+i+'" class="level_ifrm" style="z-index: 999;overflow: hidden; font-size: 30px; position: absolute; text-align: center; width:50px; height:50px; color:red; left:'+offleft+'px; top:'+offtop+'px">('+data.payload.csgo_skill_level+')</div>');
 		} else {
-			$('body').append('<div id="seek_iframe_'+i+'" class="level_ifrm" style="z-index: 999;overflow: hidden; font-size: 30px; position: absolute; width:50px; height:50px; color:red; left:'+offleft+'px; top:'+offtop+'px">&nbsp;'+data.payload.csgo_skill_level_label+'</div>');
+			$('body').append('<div id="seek_iframe_'+i+'" class="level_ifrm" style="z-index: 999;overflow: hidden; font-size: 30px; position: absolute; text-align: center; width:50px; height:50px; color:red; left:'+offleft+'px; top:'+offtop+'px">&nbsp;'+data.payload.csgo_skill_level_label+'</div>');
 		}
 	});
 }
@@ -47,7 +47,7 @@ function OnPageSwitch()
 
 $(window).resize(function() {
 
-	if (typeof $($('.badge')[side]).attr("src") != "undefined")
+	if (typeof $($('.badge')[side]).attr("src") == "undefined")
 	{
 		for (var i = side ; i < 5 + side ; i++) {
 			var plys = document.getElementsByClassName('player-content');
